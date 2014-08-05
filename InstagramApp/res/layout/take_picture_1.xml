@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<RelativeLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true">-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/org.acmelab.andgram"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+>
+   <!--  <com.markupartist.android.widget.ActionBar
+            android:id="@+id/pictureActionbar"
+            style="@style/Theme.AppCompat.Light.DarkActionBar"
+            app:title="@string/app_name"
+            />
+ -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+        <Button
+            android:id="@+id/btnCamera"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/take_picture"
+            android:onClick="takePicture"
+            />
+        <Button
+            android:id="@+id/btnGallery"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_gallery"
+            android:onClick="uploadFromGallery"
+            android:visibility="gone"
+            />
+        <Button
+            android:id="@+id/btnUpload"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/upload"
+            android:onClick="startUpload"
+            android:enabled="false"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/captionRow"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:id="@+id/lblCaption"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/comment"
+            android:visibility="visible"
+        />
+
+        <EditText
+            android:id="@+id/txtCaption"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/default_comment"
+            android:visibility="visible"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside" />
+
+</LinearLayout>
+<!--</RelativeLayout>-->
